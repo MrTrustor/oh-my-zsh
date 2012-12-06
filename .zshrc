@@ -45,6 +45,5 @@ export NEXUS_HOME=/usr/local/nexus
 export EDITOR=vim
 
 alias ls="ls -Alh"
-alias rm="trash-put"
 alias gitk="gitk --all &"
 alias gac="git add .; git commit -v"
