@@ -34,16 +34,26 @@ plugins=(git svn mercurial)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-export PATH=$PATH:/home/chamley/apache-maven-3.0.4/bin
-export PATH=$PATH:/home/chamley/bin
+export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/MacGPG2/bin:/usr/local/zend/bin:/Users/Trustor/Documents/ECL/TDS8/D-3/be3_propel/phing-2.4.5/bin:/Library/PostgreSQL/9.0/bin:/usr/texbin:/usr/local/zend/share/ZendFramework/bin
+# my own scripts
+PATH=$PATH:/Users/Trustor/bin
 
-export PYTHONPATH=/home/chamley/Documents/coverity/scripts-coverity
-
-export NEXUS_HOME=/usr/local/nexus
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zend/share/ZendFramework/lib
 
 export EDITOR=vim
 
-alias ls="ls -Alh"
+export LS_OPTIONS='-GAhl'
+alias ls='ls $LS_OPTIONS'
+alias rmm='macrm'
 alias gitk="gitk --all &"
 alias gac="git add .; git commit -v"
+alias emacsc='emacsclient'
+
+# Open files with the default system program
+alias -s pdf="open "
+alias -s avi="open "
+alias -s mkv="open "
+alias -s mp4="open "
+alias -s 3gp="open "
+alias -s srt="emacs "
+alias -s tex="emacs "
