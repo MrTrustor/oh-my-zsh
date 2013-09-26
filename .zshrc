@@ -36,8 +36,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 export PATH=$PATH:/usr/local/bin
 
-export LS_OPTIONS='-GAhl'
-alias ls='ls $LS_OPTIONS'
+export LS_OPTIONS="-GAhl"
+alias ls='ls ${LS_OPTIONS} --color=auto'
 alias rmm='macrm'
 alias gitk="gitk --all &"
 alias gac="git add .; git commit -v"
