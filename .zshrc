@@ -34,6 +34,7 @@ plugins=(git svn mercurial)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
+export PATH=$PATH:/usr/local/bin
 
 export LS_OPTIONS='-GAhl'
 alias ls='ls $LS_OPTIONS'
