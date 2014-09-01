@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 PATH=$PATH:/space/home/tchamley/bin
 
 export EDITOR=vim
+export PATH=$PATH:/usr/local/bin
 
 export LS_OPTIONS='-Ghl'
 alias l='ls $LS_OPTIONS'
