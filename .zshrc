@@ -43,8 +43,3 @@ export PATH=$PATH:/usr/local/bin
 export LS_OPTIONS='-Ghl'
 alias l='ls $LS_OPTIONS'
 alias gac="git add .; git commit -v"
-alias ssh="/bin/bash /space/home/tchamley/bin/ssh"
-
-# Proxy HTTP
-export http_proxy="http://httpproxy.pa3.oxalide.net:3128"
-export https_proxy=$http_proxy
