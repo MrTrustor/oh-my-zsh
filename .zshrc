@@ -34,26 +34,16 @@ plugins=(git svn mercurial)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/MacGPG2/bin:/usr/local/zend/bin:/Users/Trustor/Documents/ECL/TDS8/D-3/be3_propel/phing-2.4.5/bin:/Library/PostgreSQL/9.0/bin:/usr/texbin:/usr/local/zend/share/ZendFramework/bin
 # my own scripts
-PATH=$PATH:/Users/Trustor/bin
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/zend/share/ZendFramework/lib
+PATH=$PATH:/space/home/tchamley/bin
 
 export EDITOR=vim
 
-export LS_OPTIONS='-GAhl'
-alias ls='ls $LS_OPTIONS'
-alias rmm='macrm'
-alias gitk="gitk --all &"
+export LS_OPTIONS='-Ghl'
+alias l='ls $LS_OPTIONS'
 alias gac="git add .; git commit -v"
-alias emacsc='emacsclient'
+alias ssh="/bin/bash /space/home/tchamley/bin/ssh"
 
-# Open files with the default system program
-alias -s pdf="open "
-alias -s avi="open "
-alias -s mkv="open "
-alias -s mp4="open "
-alias -s 3gp="open "
-alias -s srt="emacs "
-alias -s tex="emacs "
+# Proxy HTTP
+export http_proxy="http://httpproxy.pa3.oxalide.net:3128"
+export https_proxy=$http_proxy
