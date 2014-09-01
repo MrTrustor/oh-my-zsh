@@ -33,6 +33,15 @@ plugins=(git svn mercurial)
 
 source $ZSH/oh-my-zsh.sh
 
+# Autocomplete
+zstyle -e ':completion:*:hosts' hosts 'reply=(
+  ${=${(f)"$(cat /etc/hosts(|)(N) <<(ypcat hosts 2>/dev/null))"}%%\#*}
+  ${=${${${${(@M)${(f)"$(cat ~/.ssh/config 2>/dev/null)"}:#Host *}#Host }:#*\**}:#*\?*}}
+  ${=${${${${(@M)${(f)"$(cat /etc/ssh/ssh_config 2>/dev/null)"}:#host *}#host }:#*\**}:#*\?*}}
+)'
+# a ajouter pour l'autocomplete sur le known_hosts
+# ${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) 2>/dev/null)"}%%[#| ]*}//,/ }
+
 # Customize to your needs...
 # my own scripts
 PATH=$PATH:/space/home/tchamley/bin
