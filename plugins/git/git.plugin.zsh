@@ -125,7 +125,7 @@ alias gsd='git svn dcommit'
 # Usage example: git pull origin $(current_branch)
 #
 function current_branch() {
-  if [ ! -d .git ]; then return; fi
+  if [ ! git rev-parse --show-toplevel 1>/dev/null 2>&1 ]; then return; fi
   ref=$(git symbolic-ref HEAD 2> /dev/null) || \
   ref=$(git rev-parse --short HEAD 2> /dev/null) || return
   echo ${ref#refs/heads/}
