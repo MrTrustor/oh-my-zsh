@@ -1,0 +1,21 @@
+#compdef chef2
+
+_chef2() {
+	local curcontext="$curcontext" state line
+	typeset -A opt_args
+
+	_arguments \
+		'1: :->client'\
+		'2: :->project'
+
+	case $state in
+		client)
+			_arguments "1:Client:($(ls /space/chefistrano/conf))"
+		;;
+		project)
+			compadd "$@" $(ls /space/chefistrano/conf/$words[2] | sed -e 's/\.yml//')
+		;;
+	esac
+}
+
+_chef2 "$@"

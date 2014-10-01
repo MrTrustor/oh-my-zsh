@@ -41,6 +41,7 @@ zstyle -e ':completion:*:hosts' hosts 'reply=(
 )'
 # a ajouter pour l'autocomplete sur le known_hosts
 # ${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) 2>/dev/null)"}%%[#| ]*}//,/ }
+fpath=(~/.oh-my-zsh/completion $fpath) 
 
 # Customize to your needs...
 # my own scripts
