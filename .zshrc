@@ -56,6 +56,7 @@ alias gac="git add .; git commit -v"
 alias ssh="/bin/bash /space/home/tchamley/bin/ssh"
 alias ipadm=\	'dig AXFR adm oxalide.infra.infra-01.adm | egrep -i'
 alias ipipmi=\	'dig AXFR ipmi oxalide.infra.infra-01.adm | egrep -i'
+alias c="chef2"
 # Proxy HTTP
 export http_proxy="http://httpproxy.pa3.oxalide.net:3128"
 export https_proxy=$http_proxy
