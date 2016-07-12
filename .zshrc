@@ -35,10 +35,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # my own scripts
-PATH=$PATH:/space/home/tchamley/bin
 
 export EDITOR=vim
-export PATH=$PATH:/usr/local/bin
+export PATH=/usr/local/bin:/opt/local/bin:~/bin:$PATH
 
 export LS_OPTIONS='-Ghl'
 alias l='ls $LS_OPTIONS'
