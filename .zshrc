@@ -29,7 +29,7 @@ ZSH_THEME="mrtrustor"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn mercurial)
+plugins=(git brew docker osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,8 +37,29 @@ source $ZSH/oh-my-zsh.sh
 # my own scripts
 
 export EDITOR=vim
-export PATH=/usr/local/bin:/opt/local/bin:~/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=~/bin:$GOPATH/bin:/usr/local/bin:/opt/local/bin:/usr/local/opt/go/libexec/bin:$PATH
+export AWS_DEFAULT_PROFILE=perso
+export VAULT_ADDR=https://vault.oxalide.net
 
 export LS_OPTIONS='-Ghl'
 alias l='ls $LS_OPTIONS'
 alias gac="git add .; git commit -v"
+alias octave-cli="~/bin/start-octave.sh"
+alias octave-gui="docker run --rm --name octave_gui -p 8083:8083 -v $HOME/.octaverc:/root/.octaverc -v /Users/MrTrustor/Documents/Infomatique/machine-learning:/scripts epflsti/octave-x11-novnc-docker"
+alias octave-gui-stop="docker stop octave_gui"
+alias vim="nvim"
+alias hugo="docker run --rm mrtrustor/hugo:0.16"
+
+# AWS CLI autocomplete
+source /usr/local/share/zsh/site-functions/_aws
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/MrTrustor/bin/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/MrTrustor/bin/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/MrTrustor/bin/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/MrTrustor/bin/google-cloud-sdk/completion.zsh.inc'
+fi

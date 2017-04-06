@@ -55,6 +55,7 @@ function user_host() {
 }
 
 PROMPT=$'\n$(ssh_connection)$(user_host):%{$fg_bold[blue]%}%D{[%T]}%{$reset_color%}:%~\n$(my_git_prompt)%{$fg_bold[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
+#PROMPT=$'\n%{$fg_bold[blue]%}docker-workshop \n->%{$reset_color%} '
 
 ZSH_THEME_PROMPT_RETURNCODE_PREFIX="%{$fg_bold[red]%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[yellow]%}["
